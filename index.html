@@ -3,21 +3,53 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Survey Form</title>
+  <title>Document</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <h1 id="title">My Survey Form</h1>
   <p id="description">Please help me fill this form for a donation program</p>
-  <form action="submit">
-    <label id="name-label"> 
-      <input id="name" type="text" placeholder="Enter name..">
-      </label id="email-label">
-    <label>
-      <input id="email" type="email" placeholder="Enter email..">
-    </label id="number-label">
-    <label> 
+  <form action="submit" id="survey-form">
+    
+    <label id="name-label">Name
+      <input id="name" type="text" placeholder="Enter name.." required>
+    </label>
+    
+    <label id="email-label">Email
+      <input id="email" type="email" placeholder="Enter email.." required>
+    </label>
+    
+    <label id="number-label">Amount
       <input id="number" type="number" min="20" max="10000" placeholder="Amount">
-     </label>
+    </label>
+
+    <select id="dropdown">
+      <option>Preferred Donation Method:</option>
+      <option>Credit Card</option>
+      <option>PayPal</option>
+      <option>Bank Transfer</option>
+      <option>Moneygram</option>
+      <option>Cash app</option>
+    </select>
+
+    <p>Would you like to receive updates about our program?</p>
+    <input type="radio" id="yes" name="updates" value="yes" checked>
+    <label for="yes">Yes</label><br>
+    <input type="radio" id="no" name="updates" value="no">
+    <label for="no">No</label>
+
+    <p>Select your preferred program updates:</p>
+    <label>
+      <input type="checkbox" name="program" value="news" required> News Updates
+    </label>
+    <label>
+      <input type="checkbox" name="program" value="events"> Events Information
+    </label>
+
+    <p>Share quote:</p>
+    <textarea></textarea>
+    
+    <button id="submit">Submit</button>
   </form>
 </body>
 </html>
